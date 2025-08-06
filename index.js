@@ -6,11 +6,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-firebase.initializeApp({
-    credential: firebase.credential.cert(serviceAccount)
-});
-
-module.exports = { firebase };
 
 const port = 3100;
 app.listen(port, () => {
